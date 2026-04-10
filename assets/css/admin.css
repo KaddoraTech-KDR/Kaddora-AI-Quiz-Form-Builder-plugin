@@ -1,1 +1,454 @@
+.kaqf-dashboard {
+  padding: 24px;
+  background: #f6f7fb;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
 
+/* HEADER */
+.kaqf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.kaqf-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1d2327;
+  margin: 0;
+}
+
+/* BUTTON IMPROVEMENT */
+#kaqf-reset-analytics {
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+#kaqf-reset-analytics:hover {
+  background: #dc3232;
+  color: #fff;
+  border-color: #dc3232;
+}
+
+/* CARDS GRID */
+.kaqf-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* SINGLE CARD */
+.kaqf-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect */
+.kaqf-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+}
+
+/* Number */
+.kaqf-card h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  color: #2271b1;
+  /* WP primary blue */
+}
+
+/* Label */
+.kaqf-card p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #6c7781;
+}
+
+/* Accent top bar */
+.kaqf-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #2271b1, #72aee6);
+}
+
+/* EMPTY STATE */
+.kaqf-empty {
+  margin-top: 30px;
+  padding: 40px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px dashed #ccd0d4;
+}
+
+.kaqf-empty p {
+  font-size: 15px;
+  color: #6c7781;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 782px) {
+  .kaqf-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  #kaqf-reset-analytics {
+    width: 100%;
+  }
+}
+
+/* QUIZ BUILDER */
+
+.kaqf-builder h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.kaqf-builder .kaqf-card {
+  margin-bottom: 24px;
+}
+
+#kaqf-quiz-title,
+#kaqf-ai-topic {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccd0d4;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  background: #fff;
+}
+
+#kaqf-quiz-title:focus,
+#kaqf-ai-topic:focus {
+  border-color: #2271b1;
+  box-shadow: 0 0 0 1px #2271b1;
+  outline: none;
+}
+
+/* HR STYLING */
+.kaqf-builder hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* QUESTIONS AREA */
+#kaqf-questions {
+  margin-bottom: 16px;
+}
+
+/* ADD QUESTION BUTTON */
+#kaqf-add-question {
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 6px 14px;
+  transition: all 0.2s ease;
+}
+
+#kaqf-add-question:hover {
+  background: #2271b1;
+  color: #fff;
+  border-color: #2271b1;
+}
+
+/* SAVE BUTTON IMPROVEMENT */
+#kaqf-save-quiz {
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: 500;
+}
+
+/* AI BOX */
+.kaqf-ai-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+}
+
+/* AI TITLE */
+.kaqf-ai-box h3 {
+  margin-top: 0;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* AI BUTTON */
+#kaqf-generate-ai {
+  margin-top: 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+#kaqf-generate-ai:hover {
+  background: #46b450;
+  /* WP green */
+  color: #fff;
+  border-color: #46b450;
+}
+
+/* RESULT BOX */
+#kaqf-result {
+  margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 782px) {
+
+  #kaqf-quiz-title,
+  #kaqf-ai-topic {
+    max-width: 100%;
+  }
+
+  .kaqf-ai-box {
+    max-width: 100%;
+  }
+}
+
+/* quizzes */
+
+.wrap h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* TABLE ENHANCEMENT */
+.widefat {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.widefat thead {
+  background: #f9fafb;
+}
+
+.widefat thead th {
+  font-weight: 600;
+  color: #1d2327;
+  padding: 14px;
+}
+
+.widefat tbody td {
+  padding: 14px;
+  vertical-align: middle;
+}
+
+/* ROW HOVER EFFECT */
+.widefat tbody tr:hover {
+  background: #f6f7fb;
+}
+
+.widefat input[type="text"] {
+  width: 260px;
+  max-width: 100%;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccd0d4;
+  font-size: 13px;
+  margin-right: 8px;
+}
+
+.kaqf-copy {
+  margin-right: 6px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.kaqf-copy:hover {
+  background: #2271b1;
+  color: #fff;
+  border-color: #2271b1;
+}
+
+.button-danger {
+  border-color: #dc3232;
+  color: #dc3232;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.button-danger:hover {
+  background: #dc3232;
+  color: #fff;
+  border-color: #dc3232;
+}
+
+/* EMPTY STATE ROW */
+.widefat tbody tr td[colspan] {
+  text-align: center;
+  color: #6c7781;
+  padding: 20px;
+}
+
+/* RESPONSIVE TABLE */
+@media (max-width: 782px) {
+  .widefat input[type="text"] {
+    width: 100%;
+    margin-bottom: 6px;
+  }
+
+  .kaqf-copy,
+  .button-danger {
+    display: inline-block;
+    margin-top: 4px;
+  }
+}
+
+.kaqf-analytics h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.kaqf-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+/* CHART BOX */
+.kaqf-chart-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+/* CANVAS RESPONSIVE */
+#kaqfChart {
+  width: 100% !important;
+  height: auto !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 782px) {
+  .kaqf-chart-box {
+    padding: 16px;
+  }
+}
+
+/* SETTINGS UI */
+
+.kaqf-settings h1 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* FORM CONTAINER FEEL */
+.kaqf-settings form {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  max-width: 700px;
+}
+
+/* TABLE CLEANUP */
+.kaqf-settings .form-table {
+  margin-top: 10px;
+}
+
+.kaqf-settings .form-table th {
+  font-weight: 600;
+  color: #1d2327;
+  padding: 14px 10px;
+  width: 200px;
+}
+
+.kaqf-settings .form-table td {
+  padding: 14px 10px;
+}
+
+/* INPUT FIELD */
+.kaqf-settings input[type="text"] {
+  width: 100%;
+  max-width: 420px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccd0d4;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.kaqf-settings input[type="text"]:focus {
+  border-color: #2271b1;
+  box-shadow: 0 0 0 1px #2271b1;
+  outline: none;
+}
+
+/* SELECT */
+.kaqf-settings select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccd0d4;
+  min-width: 160px;
+}
+
+/* CHECKBOX ALIGNMENT */
+.kaqf-settings input[type="checkbox"] {
+  margin-right: 6px;
+  transform: scale(1.1);
+}
+
+/* LABEL TEXT */
+.kaqf-settings label {
+  font-size: 14px;
+  color: #50575e;
+}
+
+/* SUCCESS NOTICE IMPROVEMENT */
+.kaqf-settings .notice-success {
+  border-left: 4px solid #46b450;
+  border-radius: 8px;
+}
+
+/* SUBMIT BUTTON */
+.kaqf-settings .button-primary {
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 782px) {
+  .kaqf-settings form {
+    padding: 16px;
+  }
+
+  .kaqf-settings .form-table th {
+    width: 100%;
+    display: block;
+    padding-bottom: 6px;
+  }
+
+  .kaqf-settings .form-table td {
+    display: block;
+    padding-top: 0;
+  }
+}
